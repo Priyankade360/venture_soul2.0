@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+.mainBody{
+  max-width:1200px;
+}
