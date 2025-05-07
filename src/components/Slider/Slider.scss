@@ -105,11 +105,29 @@
         .mainDirectorImg {
           //   padding: 2rem 3rem 0 0rem;
           //   width: auto;
-          img {
-            // width: 586px;
-            // height: 540px;
+          overflow: hidden;
 
-            height: 500px;
+          .background-overlay {
+            animation: slideUpFadeIn 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(100px);
+            img {
+              // width: 586px;
+              // height: 540px;
+
+              height: 500px;
+            }
+          }
+          teamImage {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
+          @keyframes slideUpFadeIn {
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
         }
       }
