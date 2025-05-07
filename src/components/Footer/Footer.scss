@@ -1,24 +1,98 @@
 .Footer {
-    // position: fixed;
-    bottom: 0;
-    background-color: var(--primary);
-    width: 100%;
+  bottom: 0;
+  background-color: var(--primary);
+  width: 100%;
 
-.footerContainer{
+  .footerContainer {
     width: 90%;
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
 
-    .footer-links{
-        width: 70%;
-        padding: 40px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
+    .footer-logo {
+      width: 20%;
+      padding: 80px;
     }
-}
 
+    .footer-links {
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 3rem;
+
+      .footer-column {
+        color: var(--background);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
+        gap: 10px;
+        text-align: left;
+
+        .texer {
+          color: var(--background);
+          color: #fff;
+          text-decoration: none;
+        }
+
+        h4 {
+          font-weight: 800;
+        }
+
+        .container1 {
+          color: var(--background);
+        }
+        .contact-row {
+          display: flex;
+          align-items: flex-start;
+          font-size: 12px;
+          gap: 10px;
+
+          .contact-label {
+            font-weight: 500;
+            font-size: 14px;
+          }
+
+          .contact-info {
+            line-height: 1.6;
+          }
+        }
+        .social-icons {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          text-align: left;
+          padding-left: 0;
+
+          .social-icon {
+            color: white;
+            transition: 0.3s;
+            width: 40px;
+            height: 40px;
+
+            &:hover {
+              color: #ffcc00;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .footer-bottom {
+      width: 80%;
+      color: var(--background);
+      padding: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+    }
+  }
 }

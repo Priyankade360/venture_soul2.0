@@ -1,7 +1,8 @@
 body {
+  width: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
   display: flex;
   flex-direction: column;
@@ -11,6 +12,9 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-.mainBody{
-  max-width:1200px;
+
+
+.mainBody {
+  width: 100%;
+  max-width: 1920px;
 }

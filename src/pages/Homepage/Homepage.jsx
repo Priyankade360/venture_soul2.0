@@ -12,13 +12,13 @@ const Homepage = () => {
   return (
     <div className="all-divs">
       <div className="container1">
-        <Homebanner />
+        {/* <Homebanner />
         <Mapsection />
-        <Strategicsec />
+        <Strategicsec /> */}
         <Slider />
-        <GrowthSec />
+        {/* <GrowthSec />
         <Journey />
-        <NewsSection />
+        <NewsSection /> */}
       </div>
     </div>
   );
