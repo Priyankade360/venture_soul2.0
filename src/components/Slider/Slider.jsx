@@ -14,6 +14,8 @@ import img4 from "../../assets/image/kunal-wadhwa-home-img.png";
 import slider_company1 from "../../assets/temp_image/image 17.png";
 import slider_company2 from "../../assets/temp_image/image (7).png";
 import slider_company3 from "../../assets/temp_image/image 17 (1).png";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+import { styled } from "@mui/material/styles";
 
 const teamMembers = [
   {
@@ -82,6 +84,15 @@ const alternateImages = {
   2: img3,
   3: img4,
 };
+
+// Tooltip with custom width
+const CustomWidthTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))({
+  [`& .${tooltipClasses.tooltip}`]: {
+    maxWidth: 300,
+  },
+});
 const Slider = () => {
   const [selectedMember, setSelectedMember] = useState(teamMembers[0]);
   const [backgroundImage, setBackgroundImage] = useState(mainDirectorImg);
@@ -108,6 +119,14 @@ const Slider = () => {
     speed: 1000,
   };
 
+  const listVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: index * 0.2, duration: 0.5 },
+    }),
+  };
   return (
     <div className="mainSliderContainer">
       <div className="sliderContainer1">
@@ -147,32 +166,34 @@ const Slider = () => {
             </div>
           </div>
           <div className="topRightContainer">
-            <div className="mainDirectorImg">
-              {/* <img src={mainDirectorImg} /> */}
-              <motion.div className="background-overlay" style={{}}>
-                <img src={backgroundImage} alt="" className="teamImage" />
-              </motion.div>
-            </div>
+            <motion.div className="mainDirectorImg" style={{}}>
+              <img src={backgroundImage} alt="" />
+            </motion.div>
           </div>
         </div>
 
         <div className="bottomContainer">
           <div className="bottomLeftContainer">
             {listItems.map((item, index) => (
-              <div
+              <motion.div
                 key={index}
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                variants={listVariants}
+                viewport={{ once: false, amount: 0.3 }}
                 className="criteria-item"
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="itemsContent">
-                  {" "}
-                  <strong title={item.tooltip}>{item.label}</strong>
-                </div>
-                <div className="sliderIcon">
-                  <img src={sliderIconImg} />
-                  <div className="iconTooltip">{item.tooltip}</div>
-                </div>
-              </div>
+                {item.label}
+                <CustomWidthTooltip title={item.tooltip} placement="right">
+                  <span
+                    className="list-icon"
+                    style={{ cursor: "pointer", display: "inline-block" }}
+                  >
+                    <img src={sliderIconImg} alt="icon" />
+                  </span>
+                </CustomWidthTooltip>
+              </motion.div>
             ))}
           </div>
 

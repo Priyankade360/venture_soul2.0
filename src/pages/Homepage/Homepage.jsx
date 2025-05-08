@@ -12,8 +12,8 @@ const Homepage = () => {
   return (
     <div className="all-divs">
       <div className="container1">
-        {/* <Homebanner />
-        <Mapsection />
+        <Homebanner />
+        {/* <Mapsection />
         <Strategicsec /> */}
         <Slider />
         {/* <GrowthSec />

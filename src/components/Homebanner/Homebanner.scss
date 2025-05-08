@@ -1,0 +1,39 @@
+.homeTeamMainContainer {
+  border: 2px solid red;
+  // height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+
+  .homeTeamSubContainer {
+    max-width: 1600px;
+    width: 100%;
+    border: 2px solid green;
+    // height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .homeTeamTestContainer {
+      border: 2px solid #595fd1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .homeTeamTestLeftContainer {
+        border: 2px solid #73d159;
+        // width: 50%;
+      }
+
+      .homeTeamTestRightContainer {
+        border: 2px solid #be53e8;
+        // width: 50%;
+
+        .homebannerVideo {
+          height: 450px;
+        }
+      }
+    }
+  }
+}

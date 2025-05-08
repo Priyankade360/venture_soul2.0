@@ -1,26 +1,31 @@
 .mainSliderContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
 
   .sliderContainer1 {
     width: 100%;
-    border: 2px solid red;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .topContainer {
-      padding: 1rem 1rem 0 1rem;
       display: flex;
       flex-direction: row;
+      gap: 40px;
       justify-content: space-between;
-      gap: 10rem;
+      max-width: 1600px;
+      width: 90%;
 
       .topLeftContainer {
         display: flex;
         flex-direction: column;
-        padding: 3rem 0 3rem 8rem;
-
         justify-content: space-around;
         gap: 10px;
         width: 40%;
+        align-items: flex-start;
 
         .topLeftContainer1 {
           display: flex;
@@ -28,10 +33,6 @@
           flex-direction: row;
           gap: 10px;
           padding-right: 10px;
-
-          //   .slick-slider {
-          //     overflow: hidden;
-          //   }
 
           .slick-slide {
             margin: 0;
@@ -101,28 +102,18 @@
 
       .topRightContainer {
         width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .mainDirectorImg {
-          //   padding: 2rem 3rem 0 0rem;
-          //   width: auto;
           overflow: hidden;
+          padding: 0px 10px 0px 10px;
 
-          .background-overlay {
-            animation: slideUpFadeIn 1s ease-out forwards;
-            opacity: 0;
-            transform: translateY(100px);
-            img {
-              // width: 586px;
-              // height: 540px;
+          img {
+            height: 500px;
+          }
 
-              height: 500px;
-            }
-          }
-          teamImage {
-            width: 100%;
-            height: auto;
-            display: block;
-          }
           @keyframes slideUpFadeIn {
             to {
               opacity: 1;
@@ -155,60 +146,12 @@
         .criteria-item {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           gap: 10px;
-          opacity: 0;
-          transform: translateY(20px);
-          animation: slideUp 0.5s ease-out forwards;
 
-          @keyframes slideUp {
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-          .itemsContent {
-            padding: 5px;
-          }
-
-          .sliderIcon {
-            display: inline-flex;
-            align-items: center;
-            cursor: pointer;
-            flex-shrink: 0;
-
-            img {
-              margin-right: 8px;
-              flex-shrink: 0;
-            }
-
-            .iconTooltip {
-              width: 100px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              align-items: center;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-
-              background: #333;
-              color: #fff;
-              border-radius: 4px;
-              transform: scale(0);
-              opacity: 0;
-              transform-origin: left center;
-              transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-            }
-
-            &:hover {
-              .iconTooltip {
-                transform: scale(1);
-                opacity: 1;
-              }
-            }
+          .list-icon {
+            display: flex;
           }
         }
       }
