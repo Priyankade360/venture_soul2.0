@@ -1,0 +1,142 @@
+.homeMapMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .homeMapMainSubContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .homeMapMainNestContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+
+      .mapContainerHeading {
+        color: var(--primary);
+        font-size: 40px;
+      }
+
+      .mapContainerScrollingLogo {
+        width: 90%;
+
+        .mySwiper {
+          width: 100%;
+
+          .swiperItems {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              height: 80%;
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+
+      .mapWrapp {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .mapContainerMapSection {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+
+          .mapImage {
+            width: 60%;
+            display: block;
+          }
+
+          .map-marker {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 10;
+
+            .map-icon {
+              width: 22px;
+              height: 22px;
+              cursor: pointer;
+              box-shadow: 0 3px 6px rgba(16, 16, 16, 0.4); 
+              border-radius: 50%; 
+            }
+
+            .popup-box {
+              display: none;
+              position: absolute;
+              top: -115px;
+              right: -100px;
+              width: 150px;
+              transform: translateX(-100%);
+              padding: 6px;
+              border-radius: 6px;
+              background-color: var(--primary);
+              color: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+              z-index: 20;
+
+              img {
+                width: 100px;
+                height: auto;
+                display: block;
+              }
+            }
+
+            &:hover .popup-box {
+              display: block;
+            }
+            .portfolioGrid {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 250px;
+
+              .portfolioCard {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 10px;
+                width: 90%;
+                height: 200px;
+
+                .imageContainer {
+                  width: 100%;
+                }
+                p {
+                  font-size: 8px;
+                }
+                .content {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  gap: 10px;
+
+                  .contentHeading {
+                    font-size: 10px;
+                  }
+                  .contentParagraph {
+                    font-size: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

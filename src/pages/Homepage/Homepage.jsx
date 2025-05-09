@@ -13,8 +13,8 @@ const Homepage = () => {
     <div className="all-divs">
       <div className="container1">
         <Homebanner />
-        {/* <Mapsection />
-        <Strategicsec /> */}
+        <Mapsection />
+        {/* <Strategicsec /> */}
         <Slider />
         {/* <GrowthSec />
         <Journey />

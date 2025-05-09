@@ -1,37 +1,184 @@
-.homeTeamMainContainer {
-  border: 2px solid red;
-  // height: 300px;
+.homeHomeBannerMainContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 10px 0px 10px;
 
-  .homeTeamSubContainer {
-    max-width: 1600px;
+  .homeHomeBannerSubContainer {
     width: 100%;
-    border: 2px solid green;
-    // height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    .homeTeamTestContainer {
-      border: 2px solid #595fd1;
+    .homeHomeBannerTestContainer {
+      width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 25px;
+      position: relative;
 
-      .homeTeamTestLeftContainer {
-        border: 2px solid #73d159;
-        // width: 50%;
+      .homeHomeBannerTestLeftContainer {
+        .homebannerVideo {
+          width: 100%;
+          height: 500px;
+          display: block;
+          object-fit: fill;
+        }
       }
 
-      .homeTeamTestRightContainer {
-        border: 2px solid #be53e8;
-        // width: 50%;
+      .homeHomeBannerTestRightContainer {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-end;
 
-        .homebannerVideo {
-          height: 450px;
+        .homeHomeBannerTestSubRightContainer {
+          width: 60%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 30px;
+
+          .homeHomeBannerRightContainerLeft {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            width: 50%;
+            height: 260px;
+            align-items: center;
+
+            .homeHomeBannerRightContainerLeftHeadingPara {
+              width: 90%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              gap: 22px;
+
+              .rightContainerLeftHeading {
+                font-size: 18px;
+                font-weight: 800;
+                color: #545050;
+              }
+
+              .rightContainerLeftParagraph {
+                font-size: 14px;
+                font-weight: 500;
+                color: #545050;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                line-break: anywhere;
+                line-height: 1.5;
+                gap: 18px;
+              }
+            }
+          }
+          .homeHomeBannerRightContainerRight {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            width: 50%;
+
+            .homeHomeBannerImgLeftContainer {
+              height: 100%;
+              width: 80%;
+              display: flex;
+
+              img {
+                overflow: auto;
+              }
+            }
+            .homeHomeBannerImgRightContainer {
+              height: 100%;
+              width: 100%;
+              display: flex;
+              object-fit: fill;
+
+              img {
+                overflow: auto;
+              }
+            }
+          }
+        }
+      }
+
+      .homeBannerCardContainer {
+        position: absolute;
+        top: 25%;
+        left: 6%;
+        background: white;
+        width: 30%;
+        max-width: 500px;
+        z-index: 2;
+
+        .card {
+          background: #022061;
+          color: white;
+          padding: 28px 45px 30px 50px;
+          height: 33rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+          }
+
+          p {
+            font-size: 15px;
+            margin-bottom: 18px;
+            padding-bottom: 30px;
+            line-height: 1.4;
+            letter-spacing: 1px;
+          }
+
+          .bordered-icon {
+            img {
+              width: 36px;
+              border-radius: 10px;
+            }
+          }
+
+          .divider {
+            width: 108%;
+            height: 0.5px;
+            background: #eeeaea;
+            margin-bottom: 40px;
+            margin-left: -16px;
+            opacity: 0.2;
+          }
+        }
+
+        .navigation-arrows {
+          display: flex;
+          gap: 18px;
+          justify-content: flex-start;
+          margin-bottom: 20px;
+
+          .prevButton,
+          .nextButton {
+            background: transparent;
+            border: 2px solid #6676c8;
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            border-radius: 50%;
+
+            img {
+              width: 14px;
+              height: 14px;
+              object-fit: contain;
+            }
+          }
         }
       }
     }
