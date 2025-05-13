@@ -5,7 +5,7 @@ import Mapsection from "../../components/Mapsection/Mapsection";
 import Strategicsec from "../../components/Strategicsec/Strategicsec";
 import Slider from "../../components/Slider/Slider";
 import GrowthSec from "../../components/GrowthSec/GrowthSec";
-import Journey from "../../components/Journey/Journey";
+import JourneySwiper from "../../components/Journey/JourneySwiper";
 import NewsSection from "../../components/NewsSection/NewsSection";
 
 const Homepage = () => {
@@ -14,11 +14,11 @@ const Homepage = () => {
       <div className="container1">
         <Homebanner />
         <Mapsection />
-        {/* <Strategicsec /> */}
+        <Strategicsec />
         <Slider />
-        {/* <GrowthSec />
-        <Journey />
-        <NewsSection /> */}
+        <GrowthSec />
+        <JourneySwiper />
+        <NewsSection />
       </div>
     </div>
   );

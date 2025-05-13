@@ -5,7 +5,7 @@
 
   .sliderContainer1 {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1920px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,7 +141,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 25px;
+        gap: 30px;
 
         .criteria-item {
           display: flex;
@@ -149,6 +149,7 @@
           justify-content: center;
           align-items: center;
           gap: 10px;
+          font-size: 20px;
 
           .list-icon {
             display: flex;

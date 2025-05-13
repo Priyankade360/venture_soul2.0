@@ -1,15 +1,53 @@
 .HeaderMainContainer {
   background-color: var(--primary);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 
   display: flex;
   justify-content: center;
 
   .headerContent {
     width: 90%;
-    padding: 1rem;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
 
     .logo {
-      width: 10%;
+      width: 20%;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .headerContentText {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      gap: 15px;
+      width: 60%;
+
+      .texer {
+        color: white;
+      }
+    }
+
+    .getStartedButton {
+      width: 20%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .startedButton {
+        color: white;
+        width: 60%;
+        height: 40px;
+        background-color: blue;
+      }
     }
   }
 }

@@ -1,0 +1,320 @@
+.journey-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  .journey-backgorund-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    // Background 2 positioned on top of the main background
+    .journey-backgorund-section-2 {
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: auto;
+      z-index: 1;
+    }
+
+    // GIF on the left side
+    .journey-gif {
+      position: absolute;
+      left: -16%;
+      top: 57%;
+      transform: translateY(-50%);
+      width: 56%;
+      object-fit: contain;
+      z-index: 2;
+    }
+  }
+
+  // ✅ Milestone section moved to the right side & arranged horizontally
+  .milestone-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .milestone-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 55px;
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    right: 10%;
+    top: 7%;
+    transform: translateY(-50%);
+    background: transparent;
+    // animation: slideLeft 15s linear infinite;
+  }
+
+  .milestone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: 50%;
+    transition: transform 0.5s ease-in-out;
+
+    .circle {
+      background: white;
+      border-radius: 50%;
+      text-align: center;
+      font-weight: 600;
+      color: #0039cc;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    &.large {
+      margin-bottom: -4%;
+      .circle {
+        width: 150px;
+        height: 150px;
+
+        border: 20px solid #0923d0;
+        .date {
+          font-size: 14px;
+          margin-top: 60px;
+          color: black;
+        }
+        .text {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &.medium {
+      margin-bottom: 1%;
+      .circle {
+        width: 150px;
+        height: 150px;
+        border: 15px solid #0039cc;
+        .date {
+          font-size: 14px;
+          margin-top: 42px;
+          color: black;
+        }
+        .text {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.small {
+      margin-bottom: 4%;
+      .circle {
+        width: 120px;
+        height: 120px;
+        border: 10px solid #0039cc;
+        .date {
+          font-size: 12px;
+          margin-top: 22px;
+          color: black;
+          margin-top: 32px;
+        }
+        .text {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.extra-small {
+      margin-bottom: 8%;
+      .circle {
+        width: 80px;
+        height: 80px;
+        border: 8px solid #0039cc;
+        .date {
+          font-size: 8px;
+          color: black;
+          margin-top: 28px;
+        }
+        .text {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .line {
+      width: 2px;
+      background: #0923d0;
+    }
+
+    &.large .line {
+      height: 200px;
+    }
+    &.medium .line {
+      height: 170px;
+    }
+    &.small .line {
+      height: 140px;
+    }
+    &.extra-small .line {
+      height: 100px;
+    }
+
+    .base {
+      border-radius: 50%;
+      border: 3px solid #0039cc;
+      background: #2a3985;
+    }
+
+    &.large .base {
+      width: 186px;
+      height: 50px;
+    }
+    &.medium .base {
+      width: 150px;
+      height: 40px;
+    }
+    &.small .base {
+      width: 120px;
+      height: 30px;
+    }
+    &.extra-small .base {
+      width: 100px;
+      height: 25px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .journey-background-section-2 {
+      width: 70%;
+    }
+    .journey-gif {
+      width: 140px;
+      height: 180px;
+    }
+    .milestone-container {
+      width: 90%;
+      right: 2%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .journey-background-section-2 {
+      width: 60%;
+    }
+    .journey-gif {
+      width: 120px;
+      height: 160px;
+    }
+    .milestone-container {
+      width: 100%;
+      right: 0;
+      justify-content: center;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .journey-background-section-2 {
+      width: 50%;
+    }
+    .journey-gif {
+      width: 100px;
+      height: 140px;
+      left: 2%;
+    }
+    .milestone-container {
+      flex-direction: column;
+      width: 100%;
+      right: 0;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}
+.journey-section {
+  display: flex;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+.mobile-roadmap {
+  display: none;
+
+  @media (max-width: 600px) {
+    display: block;
+    width: 80%;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 6rem;
+    margin-left: 2rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background-color: #0039cc;
+    }
+
+    .roadmap-item {
+      width: 100%;
+      margin-bottom: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .roadmap-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 18px;
+        height: 18px;
+        background-color: #fff;
+        border: 2px solid #0039cc;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .roadmap-content {
+        width: 45%;
+        position: relative;
+        color: #0039cc;
+
+        h4 {
+          font-size: 14px;
+          font-weight: 700;
+          margin: 0;
+        }
+
+        p {
+          font-size: 12px;
+          margin: 4px 0 0;
+          color: #0039cc;
+        }
+      }
+
+      &:nth-child(odd) .roadmap-content {
+        left: calc(50% - 100%);
+        text-align: right;
+      }
+
+      &:nth-child(even) .roadmap-content {
+        left: calc(50% + 18px);
+        text-align: left;
+      }
+    }
+  }
+}

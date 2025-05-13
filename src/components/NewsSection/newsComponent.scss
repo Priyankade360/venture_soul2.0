@@ -1,0 +1,91 @@
+.newsBox {
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    width: 650px;
+    height: 400px;
+
+    img {
+        // width: 650px;
+        // height: 400px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+    }
+
+    .textContainer {
+        position: absolute;
+        bottom: 40px;
+        // width: 100%;
+        width: 650px; 
+        left: 0;
+    }
+    
+    .textBox {
+        background-color: #022061;
+        width: 100%;
+        position: absolute;
+        z-index: 5;
+        margin-bottom: 10px;
+        // bottom: 24px;
+        bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .newBox{
+            padding: 20px;
+        }
+
+        cursor: pointer;
+
+        .tags {
+            display: flex;
+
+            .title {
+                // padding: 8px 15px;
+                font-size: 20px;
+                color: #fff;
+                // background-color: rgba(124, 122, 122, 0.5);
+                padding-bottom: 5px;
+            }
+        }
+
+        .desc {
+            color: #fff;
+            font-size: 22px;
+            text-align: left;
+            line-height: 1.5;
+
+        }
+
+        .date {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+
+            img {
+                width: 20px;
+                object-fit: contain;
+            }
+
+            p {
+                color: #ffffff99;
+                font-size: 12px;
+                // line-height: 18px;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .newsBox{
+        width: 380px;
+    }
+    .textContainer {
+        bottom: 90px !important;
+      
+    }
+}

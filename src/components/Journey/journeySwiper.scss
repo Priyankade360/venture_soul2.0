@@ -1,0 +1,193 @@
+.journeySwiper {
+    position: relative;
+    overflow: hidden;
+
+    .backgroundContainer {
+        width: 100vw;
+        height: 500px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .marquee-visible-wrapper {
+        overflow: hidden;
+        position: absolute;
+        overflow: hidden;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        .marquee-strip {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+
+            .marquee-item {
+                width: calc(3 * 170px);
+                text-align: center;
+                padding: 5rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                transition: transform 0.5s ease-in-out;
+
+                &.scale {
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                .circle {
+                    background: white;
+                    border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    color: #0039cc;
+                    transition: transform 0.5s ease-in-out;
+                    width: 150px;
+                    height: 150px;
+                    border: 12px solid #0039cc;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    padding: 30px;
+
+                    .CircleBox {
+                        width: 90%;
+                        height: 100%;
+                        overflow: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+
+                    }
+
+                    .text {
+                        font-size: 18px;
+                        flex-wrap: wrap;
+                    }
+
+                    .date {
+                        font-size: 18px;
+                        color: black;
+                    }
+
+                }
+
+                .line {
+                    width: 2px;
+                    background: #0923d0;
+                    height: 50px;
+
+                }
+
+                .base {
+                    border-radius: 50%;
+                    border: 3px solid #0039cc;
+                    background: #2a3985;
+                    width: 166px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .start {
+                        background-color: #fff;
+                        padding: 10px 30px;
+                        border-radius: 50%;
+                        font-size: 16px;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+.mobile-roadmap {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .journeySwiper {
+        display: none;
+    }
+
+    .mobile-roadmap {
+        display: block;
+        width: 80%;
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 6rem;
+        margin-left: 2rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #0039cc;
+        }
+
+        .roadmap-item {
+            width: 100%;
+            margin-bottom: 60px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .roadmap-dot {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 18px;
+                height: 18px;
+                background-color: #fff;
+                border: 2px solid #0039cc;
+                border-radius: 50%;
+                z-index: 1;
+            }
+
+            .roadmap-content {
+                width: 45%;
+                position: relative;
+                color: #0039cc;
+
+                h4 {
+                    font-size: 14px;
+                    font-weight: 700;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: 12px;
+                    margin: 4px 0 0;
+                    color: #0039cc;
+                }
+            }
+
+            &:nth-child(odd) .roadmap-content {
+                left: calc(50% - 100%);
+                text-align: right;
+            }
+
+            &:nth-child(even) .roadmap-content {
+                left: calc(50% + 18px);
+                text-align: left;
+            }
+        }
+
+
+    }
+}
